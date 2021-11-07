@@ -8,5 +8,7 @@
             "email": "presskeyword@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
 }
