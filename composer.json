@@ -2,6 +2,7 @@
     "name": "amonzer/logs",
     "description": "this package is intended for logging",
     "type": "library",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Abdallah Monzer",
