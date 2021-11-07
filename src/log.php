@@ -1,6 +1,8 @@
 <?php
 
-class Log{
+namespace amonzer\logs;
+
+class log{
 
     public function __construct()
     {
