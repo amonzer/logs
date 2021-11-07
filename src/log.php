@@ -7,40 +7,28 @@ use Monolog\Handler\StreamHandler;
 
 class log{
 
-    public static function info($logs){
+    public static function alert($logs, $file = 'log.log'){
         $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
-        $log->addInfo($logs);
-    }
-
-    public static function alert($logs){
-        $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
+        $log->pushHandler(new StreamHandler($file, Logger::WARNING));
         $log->addAlert($logs);
     }
 
-    public static function critical($logs){
+    public static function critical($logs, $file = 'log.log'){
         $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
+        $log->pushHandler(new StreamHandler($file, Logger::WARNING));
         $log->addCritical($logs);
     }
 
-    public static function warning($logs){
+    public static function warning($logs, $file = 'log.log'){
         $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
+        $log->pushHandler(new StreamHandler($file, Logger::WARNING));
         $log->addWarning($logs);
     }
 
-    public static function error($logs){
+    public static function error($logs, $file = 'log.log'){
         $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
+        $log->pushHandler(new StreamHandler($file, Logger::WARNING));
         $log->addError($logs);
-    }
-
-    public static function debug($logs){
-        $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
-        $log->addDebug($logs);
     }
 
 }
