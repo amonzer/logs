@@ -8,6 +8,9 @@
             "email": "presskeyword@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"amonzer\\logs\\": "src/"}
+    },
     "require": {
         "monolog/monolog": "1.0.*"
     }
